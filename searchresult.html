@@ -1,0 +1,115 @@
+<!--Projekt: Receptsökare-->
+<!--Ansvarig: Hannes Birgersson-->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Välj recept</title>
+        <link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="Script.js" ></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+       <div id="wrapper">
+            <a href="index.html"><header>
+                <h1>Receptsökare!</h1>
+            </header></a>
+            <div id="main">
+                <div id="sok">
+                    <input type="text" id="sokruta" name="sok" placeholder="Sök recept">
+                    <button type="submit" id="sokknapp" onclick="textSearch()">Hitta</button>
+                </div>
+                <div id="resultatarea">
+                    <div id="sort">
+                        Sortera efter:
+                        <select>
+                            <option value="volvo">Mest populär</option>
+                            <option value="saab">Relevans</option>
+                            <option value="mercedes">Högst betyg</option>
+                            <option value="audi">Flest ägda bilar</option>
+                        </select>
+                    </div>
+                    <a href="recipepage.html" class="resultlank"><div class="resultbox" id="result1" >
+                        <div class="bildbox" style="background-image: url('bilder/langkok.png'), url('bilder/no_image.jpg')">
+                            <!--<img src="bilder/langkok.png" alt="some_text">-->
+                        </div>
+                        <div class="receptrubrik">hej svejs</div>
+                        <div class="recepttext">detta receptet är bra</div>
+                        <div class="ingrlabel">Ingredienser:</div>
+                        <div class="ratinglbl"> Betyg: 5 </div>
+                        <div class="resultingrdbox">
+                            <ul>
+                                <li class="resultingrd">mjölk</li>
+                                <li class="resultingrd">ägg</li>
+                                <li class="resultingrd">abbiderbeido forman</li>
+                                <li class="resultingrd">ägg</li>
+                                <li class="resultingrd">mjölk</li>
+                                <li class="resultingrd">asdfdfddsfsdfsdf</li>
+                                <li class="resultingrd">mjölk</li>
+                                <li class="resultingrd">ägg</li>
+                                <li class="resultingrd">abbiderbeido forman</li>
+                                <li class="resultingrd">ägg</li>
+                                <li class="resultingrd">mjölk</li>
+                                <li class="resultingrd">asdfdfddsfsdfsdf</li>
+                            </ul>
+                        </div>
+                    </div></a>
+                    <div class="resultbox">
+                        <div class="bildbox" style="background-image: url('bilder/long.png')">
+                        </div>
+                        <div class="receptrubrik">hej svejs</div>
+                        <div class="recepttext">detta receptet är bra</div>
+                        <div class="ingrlabel">Ingredienser:</div>
+                        <div class="resultingrdbox">
+                            <ul>
+                                <li class="resultingrd">mjölk</li>
+                                <li class="resultingrd">ägg</li>
+                                <li class="resultingrd">abbiderbeido forman</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="resultbox">
+                        <div class="bildbox" style="background-image: url('bilder/cornflakez.png')">
+                        </div>
+                        <div class="receptrubrik">hej svejs</div>
+                        <div class="recepttext">detta receptet är bra</div>
+                    </div>
+                    <div class="resultbox">
+                        <div class="bildbox" style="background-image: url('bilder/ajj.png'), url('bilder/no_image.jpg')">
+                        </div>
+                        <div class="receptrubrik">hej svejs</div>
+                        <div class="recepttext">detta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bradetta receptet är bra</div>
+                    </div>
+                    <!--<div id="navarea">-->
+                        <div id="previous">
+                            <a href="#" class="hidden">Föregående sida</a>
+                        </div>
+                        <div id="resultnav">
+                            <a href="#">1 - 2 - 3 - 4 - 5</a>
+                        </div>
+                        <div id="next">
+                            <a href="#">Nästa sida</a>
+                        </div>
+                    <!--</div>-->
+                </div>
+                
+                <div id="ingredienser">
+                    <p>Dina valda ingredienser:</p>
+                    <ul>
+                        <li>Mjölk</li>
+                        <li>Ägg</li>
+                        <li>Bacon</li>
+                    </ul>
+                    <FORM ACTION="index.html">
+                    <INPUT TYPE="submit" class="button" id="redobutton" VALUE="Gör om sökning">
+                    </FORM>
+                </div>
+            </div>
+            <footer>
+                <p>Hannes Birgersson, Martin Gustavsson, Johan Stubbengaard, Maria Nguyen, Jenny Vuong</p>
+            </footer>
+        
+        </div>
+    </body>
+</html>

@@ -1,0 +1,146 @@
+<!--Projekt: Receptsökare-->
+<!--Ansvarig: Martin Gustavsson-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Receptsökare!</title>
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="Script.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<a href="index.html"><header>
+					<h1>Receptsökare!</h1>
+				</header></a>
+			<div id="main">
+				<div id="kategoriarea">
+					<div id="kategoricenter" onclick="markCat(event);">
+						<a href="javascript:showIngrds('Default','0');;"><div class="kategoribox catmark" id="defaultcat">
+	
+						</div></a>
+						<a href="javascript:showIngrds('%','0');"><div class="kategoribox" id="allaingrd">
+				
+						</div></a>
+						<a href="javascript:showIngrds('Kött','0');"><div class="kategoribox" id="kott">
+						</div></a>
+						<a href="javascript:showIngrds('Mejeri','0');"><div class="kategoribox" id="Mejeri">
+						</div></a>
+						<a href="javascript:showIngrds('Pasta','0');"><div class="kategoribox" id="Pasta">
+						</div></a>
+						<a href="javascript:showIngrds('Grönsak','0');"><div class="kategoribox" id="Veggies">
+						</div></a>
+						<a href="javascript:showIngrds('Övrigt','0');"><div class="kategoribox" id="ovrigt">
+			
+						</div></a>
+					</div>
+				</div>
+
+				<div id="sok">
+					<input type="text" id="sokruta" name="sok" placeholder="Sök receptnamn" onkeydown="if (event.keyCode == 13) document.getElementById('sokknapp').click()"/>
+					<button type="submit" id="sokknapp">Hitta</button>
+				</div>
+				<div id="pagenav">
+					<div id="CurrentCat" style="display: none;"></div>
+					<a href="javascript:showIngrds('get','ABC');">ABC</a> - 
+					<a href="javascript:showIngrds('get','DEF');">DEF</a> - 
+					<a href="javascript:showIngrds('get','EFG');">EFG</a> - 
+					<a href="javascript:showIngrds('get','GHI');">GHI</a> - 
+					<a href="javascript:showIngrds('get','JKL');">JKL</a> - 
+					<a href="javascript:showIngrds('get','MNO');">MNO</a> - 
+					<a href="javascript:showIngrds('get','PQR');">PQR</a> - 
+					<a href="javascript:showIngrds('get','STU');">STU</a> -
+					<a href="javascript:showIngrds('get','VWX');">VWX</a> - 
+					<a href="javascript:showIngrds('get','YZÅ');">YZÅ</a> - 
+					<a href="javascript:showIngrds('get','ÄÖ');">ÄÖ</a>
+				</div>
+				<div id="contentbox">
+					<div id="defaultingrds">
+						<div class="row">
+
+							<h2>Mejeri & Ägg</h2>
+							<ul>
+								<li><a href="javaScript:void(0);" class="Item">Mjölk</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Ägg</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Filmjölk</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Crème fraiche</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Ost</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Gräddfil</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Yoghurt</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Smör</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Glass</a></li>
+							</ul>
+						</div>
+						<div class="row">
+							
+							<h2>Kött & Fisk</h2>
+							<ul>
+								<li><a href="javaScript:void(0);" class="Item">Fläskfärs</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Nötfärs</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Lax</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Oxfilé</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Skinka</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Kotletter</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Bacon</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Kyckling</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Torsk</a></li>
+							</ul>
+						</div>
+						<div class="row row3">
+							<h2>Mjöl, Gryn & Pasta</h2>
+							<ul>
+								<li><a href="javaScript:void(0);" class="Item">Vetemjöl</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Havregryn</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Pasta</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Socker</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Ris</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Råggryn</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Äggnudlar</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Makaroner</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Sesamfrön</a></li>
+							</ul>
+						</div>
+
+						<div class="row">
+							<h2>Frukt & Grönt</h2>
+							<ul>
+								<li><a href="javaScript:void(0);" class="Item">Tomat</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Gurka</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Potatis</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Morötter</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Äpple</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Svamp</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Gul lök</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Majs</a></li>
+								<li><a href="javaScript:void(0);" class="Item">Vitlök</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="refreshingrds">
+						<!--AJAX för dynamiska ingredienser-->
+					</div>
+				</div>
+
+				<div id="ingredienser">
+					<p id="ingrrubrik"><span class="bold">Dina valda ingredienser:</span></p>
+					<button type="button" id="rensa">Rensa lista</button>
+					<div id="Tutorial"><span class="">Välj de ingredienser du vill ha med i din sökning bland de listade till vänster</span></div>
+					<ul id="Ingredienslista">
+					</ul>
+					<button class="button bigbutton" id="knapp">Hitta Recept</button>
+					<div id="filter">Filter</div>
+					<div id="kurscenter">
+						<a href="javascript:courseselect('förrätt');"><div class="kursbox kursmark" id="förrätt">Förrätt</div></a>
+						<a href="javascript:courseselect('huvudrätt');"><div class="kursbox kursmark" id="huvudrätt">Huvudrätt</div></a>
+						<a href="javascript:courseselect('efterrätt');"><div class="kursbox kursmark" id="efterrätt">Efterrätt</div></a>
+					</div>
+					
+				</div>
+			</div>
+			<footer>
+				<p>Hannes Birgersson, Martin Gustavsson, Johan Stubbengaard, Maria Nguyen, Jenny Vuong</p>
+			</footer>
+		</div>
+	</body>
+</html>
